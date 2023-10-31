@@ -11,10 +11,10 @@ async function saveUrlFormData(req, res) {
     
     let url = ''
     if(ServerConfig.APP_ENV == 'development') {
-        url = req.protocol + '://' + req.hostname + ':' + ServerConfig.PORT + '/api/v1/urls';
+        url = 'http://' + req.hostname + ':' + ServerConfig.PORT + '/api/v1/urls';
     }
     else {
-        url = req.protocol + '://' + req.hostname + '/api/v1/urls';
+        url = 'https://' + req.hostname + '/api/v1/urls';
     }
     let config = {
     method: 'post',
