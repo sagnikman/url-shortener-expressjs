@@ -28,7 +28,9 @@ async function saveUrlFormData(req, res) {
     let savedSlug;
     await axios.request(config)
     .then((response) => {
+    console.log(response.data);
     savedSlug = response.data.data.slug;
+    console.log("from service:", savedSlug);
     })
     .catch((error) => {
     console.log(config);

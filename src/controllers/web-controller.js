@@ -49,9 +49,10 @@ async function saveUrl(req, res) {
     }
     else {
         let savedSlug = await urlPostApi.saveUrlFormData(req, res);
+        console.log("from web-controller:", savedSlug);
         const formData = {
             urlInput: req.body.longUrl,
-            slugInput: savedSlug,
+            slugInput: null,
             hostName: req.hostname,
             slug: savedSlug,
             slugError: null    
