@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', 'Verdana', 'Arial';
+}
+
+body {
+    background-color: #06303E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#status-code {
+    font-size: 64px;
+    color: rgb(255, 123, 0);
+    margin-bottom: 0;
+}
+
+#text-not-found {
+    font-size: larger;
+    font-weight: 100000;
+    color: white;
+}
+
+#slug {
+    color: azure;
+}
+
+#home-button {
+    background-color: #06303E;
+    border: 2px solid #83979F;
+    color: white;
+    margin: 3%;
+    width: 200px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#home-button:hover {
+    background-color: #03181F;
+    border: 3px solid #dde4e7;
+}

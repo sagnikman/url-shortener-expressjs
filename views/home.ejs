@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="https://freeiconshop.com/wp-content/uploads/edd/link-open-flat.png">
+    <link rel="stylesheet" href="/styles/main.css">
+    <script async defer src="/scripts/index.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    <p id="info"> Shorten a long URL by entering a custom or random generated short code(slug).</p>
+    <form action="/" method="POST">
+        <input type="url" name="longUrl" placeholder="Paste Long URL" id="textsend" value="<%= urlInput%>">
+        <div class="text-danger">
+            
+        </div>
+        <input id="slug-input" class="form-control" type="text" name="slug" placeholder="Enter Slug" maxlength="8" value="<%= slugInput%>">
+        <small >
+            Your slug must be 1-8 characters long, contain only letters or numbers, you can leave this blank for a random slug.
+        </small>
+        <% if (slugError) { %>
+        <div class="text-danger">
+            <%= slugError %>
+        </div>
+        <% } %>
+        <div id="div-button">
+            <button type="submit" id="create-button" class="form-button">Create</button>
+            <button type="button" id="reset-button" class="form-button">Reset</button>
+        </div>
+        
+    </form>
+
+    <% if(slug) { %>
+        <p class="h6" style="color: white;">
+            Created Short URL:
+            <div id="short-url">
+                <a  id="short-url-link" href="<%= slug %>" target="_blank"><%= hostName + '/' + slug %></a>
+                <button id="copyButton" class="copy-button">Copy</button>
+            </div>
+        </p>
+        
+    <% } %>    
+
+</body>
+</html>

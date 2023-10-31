@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab:wght@300&display=swap');
+
+* {
+    font-family: 'Poppins', 'Verdana', 'Arial';
+}
+
+body {
+    background-color: #06303E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 2%;
+    background-color: #06303E;
+}
+
+input::placeholder {
+    text-align: center;
+    color: #e7e7e7;
+}
+
+small {
+    font-size: 9pt;
+    text-align: center;
+    width: 60%;
+    color: #e7e7e7;
+    display: block;
+}
+input[type="text"],
+input[type="url"] {
+    width: 55%;
+    padding: 10px;
+    margin: 1%;
+    border: 1px solid #83979F;
+    border-radius: 5px;
+    background-color: #06303E;
+    color: white;
+}
+
+input[type="text"] {
+    margin-bottom: 0.5%;
+}
+
+input[type="text"]:hover,
+input[type="url"]:hover,
+input[type="text"]:focus,
+input[type="url"]:focus {
+    border: none;
+    background-color: #03181F;
+}
+
+.form-button {
+    background-color: #06303E;
+    border: 2px solid #83979F;
+    color: white;
+    margin: 3%;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-button:hover {
+    background-color: #03181F;
+    border: 3px solid #dde4e7;
+}
+
+h1 {
+    margin: 3% 1% 1% 1%;
+    color: white;
+}
+
+#info{
+    color: white;
+    margin: 2% 1% 3% 1%;
+}
+
+#div-button {
+    display: flex;
+    margin-top: 5%;
+    width: 40%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a {
+    color: rgb(243, 201, 128);
+    padding: 7px;
+    border: solid 1px rgb(0, 174, 255);
+    font-size: 18px;
+    text-align: center;
+}
+
+a:visited {
+    color: rgb(240, 167, 83);
+    padding: 7px;
+    border: solid 1px rgb(0, 174, 255);
+    font-size: 18px;
+    text-align: center;
+}
+
+.text-danger {
+    color: red;
+    margin-top: 4px;
+}
+
+#short-url {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+    
+
+}
+
+.copy-button {
+    width: auto;
+    background-color: #06303E;
+    border: 2px solid #83979F;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.copy-button:hover {
+    background-color: #03181F;
+}
+
+.copy-button.clicked {
+    width: auto;
+    background-color: #4CAF50; 
+    animation: buttonAnimation 1s ease; 
+}
+
+.copy-button.error {
+    width: auto;
+    background-color: #ff0000; 
+    animation: buttonAnimation 1s ease; 
+}
