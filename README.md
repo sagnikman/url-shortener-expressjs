@@ -1,6 +1,6 @@
-# Node.js Project Template
+# URL Shortener using ExpressJS and EJS
 
-This is a base Node.js project template with best practices and project management recommendations.
+This is a URL Shortener service for creating short URLs for a given long URL. The short URL redirects to the original long URL. You can use random generated or custom short code(slug) for short URL.
 
 ## Project Structure
 
