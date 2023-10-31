@@ -29,7 +29,7 @@ cp .env.example .env
 cd src/
 npx sequelize init
 ```
-5. Configure `config.json` with your database details.
+5. Configure `config.js` with your database details.
 6. Run the server for development.
 ```sh
 npm run dev
